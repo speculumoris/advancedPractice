@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Account {
     private int accountNumber;// hesap numarasi
     private int pinNumber;//sifre
+
     private double checkingBalance; // vadesiz hesap bakiyesi
     private double savingBalance; //vadeli hesap bakiyesi
     DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
@@ -78,7 +79,7 @@ public class Account {
     //Musteri ile para cekmek icin etkilesime gecelim: checking hesap
     public void getCheckingWithdraw() {
         displayCurrentAmount(checkingBalance);
-        System.out.println("Cekmek istediginiz mikatri giriniz:");
+        System.out.println("Cekmek istediginiz miktari giriniz:");
         double amount = input.nextDouble();
         if (amount <= 0) {
             System.out.println("Sifir veya eksi rakamlar gecersizdir!");
